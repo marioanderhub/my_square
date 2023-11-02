@@ -9,15 +9,18 @@ o---o
 $>
 */
 
-
 void my_square(int a, int b) {
 
-    char *square = calloc(((a + 1) * b + 1), sizeof(*square));
+    char *square;
+    
+    if (a < 0 || b < 0) {
+        return;
+    }
+    square = calloc(((a + 1) * b + 1), sizeof(*square));
     if (square == NULL) {
         perror("Memory allocation failed.");
         return;
     }
-
     for (int i = 0; i < b; i++) {
         if ( i == 0 || i == b - 1) {
             // first or last row
@@ -52,11 +55,14 @@ void my_square(int a, int b) {
     printf("%s", square);
 }
 
-int main(void) {
-    my_square(5, 3);
-    my_square(5, 1);
-    my_square(1, 5);
-    my_square(4, 4);
-    my_square(10, 10);
+int main(int argc, char *argv[]) {
+    int a;
+    int b;
+
+    if (argc == 3) {
+        a = atoi(argv[1]);
+        b = atoi(argv[2]);
+        my_square(a, b);
+    }
     return 0;
 }
