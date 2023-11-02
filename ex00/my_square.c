@@ -2,11 +2,15 @@
 #include <stdlib.h>
 
 /*
-$>./a.out 5 3
-o---o
-|   |
-o---o
-$>
+**
+** QWASAR.IO -- my_sqare
+**
+** This function function prints rectangles of sides with length a, b. 
+**
+** @param {int} a
+** @param {int} b
+**
+**
 */
 
 void my_square(int a, int b) {

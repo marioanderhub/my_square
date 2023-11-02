@@ -14,15 +14,17 @@ Secondly, a for loop iterates over the number of rows that the rectangle has (ar
 Finally, the square string is printed to stdout using printf.
 
 ## Installation
-gcc must be installed.
-Compile as follows:
+gcc required
+Compile:
+```
 gcc -Wall -Werror -Wextra -o my_square my_square.c
+```
 
 ## Usage
-argument1 and argument2 must be of type integer
 ```
 ./my_square argument1 argument2
 ```
+argument1 and argument2 of type integer
 
 ### The Core Team
 anderhu_m
